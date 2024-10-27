@@ -68,11 +68,6 @@ def WifiTransmitter(*args):
         noise_pad_end = np.zeros(np.random.randint(1,1000))
         output = np.concatenate((noise_pad_begin,output,noise_pad_end))
         output = comm.channels.awgn(output,snr)
-        print(noise_pad_begin)
-        print("\n")
-        print(output)
-        print("\n")
-        print(length)
         return noise_pad_begin_length, output, length
     return output
     
